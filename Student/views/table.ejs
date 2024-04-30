@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Table Marks</title>
+        <link rel="stylesheet" href="/css/index.css">
+    </head>
+    <body>
+        <div class="container">
+            <form method="get" action="/">
+                <button type="submit" class="btn">Add New</button>
+            </form>
+        </div>
+        <br>
+        <% if(student != null) { %>
+        <table border="1px">
+            <tr>
+                <th>Name</th>
+                <th>Roll no</th>
+                <th>WAD</th>
+                <th>CC</th>
+                <th>DSBDA</th>
+                <th>CNS</th>
+                <th>Action</th>
+            </tr>
+            <% student.forEach(function(item) { %>
+            <tr>
+                <td><%= item.name %></td>
+                <td><%= item.roll_no %></td>
+                <td><%= item.wad_marks %></td>
+                <td><%= item.cc_marks %></td>
+                <td><%= item.dsbda_marks %></td>
+                <td><%= item.cns_marks %></td>
+                <td>
+                    <button onclick="toggleform('<%= item._id %>')" class="btn">Update</button>
+                    <div id = "updateForm_<%= item._id %>" style="display: none;">
+                        <form method="post" action="/updatestudent/<%= item._id %>">
+                            <input type="text" name="updatedcc" placeholder="Enter Updated Marks CC" required>
+                            <input type="text" name="updateddsbda" placeholder="Enter Updated Marks DSBDA" required>
+                            <input type="text" name="updatedwad" placeholder="Enter Updated Marks WAD" required>
+                            <input type="text" name="updatedcns" placeholder="Enter Updated Marks CNS" required>
+                            <button type="submit" class="btn">Update</button>
+                        </form>
+                    </div>
+                    <br>
+                    <form method="post" action="/deletestudent/<%= item._id %>">
+                        <button type="submit" class="btn">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            <% }) %>
+        </table>
+        <% } %>
+    </body>
+    <script>
+        function toggleform(studentid)
+        {
+            var formid = "updateForm_" + studentid
+            var form = document.getElementById(formid)
+            if(form.style.display === "none")
+            {
+                form.style.display = "block";
+            }
+            else
+            {
+                form.style.display = "none";
+            }
+        }
+    </script>
+</html>
