@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meta</title>
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container mt-3 w-50 p-2 border border-4">
+            <div class="w-100 border" style="background-color: rgb(252, 252, 206);">
+                <h1 class="text-center" style="color: red; font-family: 'Times New Roman', Times, serif; font-weight: bolder;">User Form</h1>
+            </div>
+            <div class="container mt-2">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="flex text-center" style="background-color: rgb(115, 227, 250);font-family: 'Times New Roman', Times, serif;">
+                            <h5 class="mt-1 mb-1 p-2">Enter Your Name</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="flex text-center mt-1" style="background-color: rgb(115, 227, 250);font-family: 'Times New Roman', Times, serif;">
+                            <input class="mt-1 mb-1 w-75" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="flex text-center" style="background-color: rgb(115, 227, 250);font-family: 'Times New Roman', Times, serif;">
+                            <h5 class="mt-1 mb-1 p-2">Enter Password</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="flex text-center mt-1" style="background-color: rgb(115, 227, 250);font-family: 'Times New Roman', Times, serif;">
+                            <input class="mt-1 mb-1 w-75" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="flex text-center" style="background-color: rgb(115, 227, 250);font-family: 'Times New Roman', Times, serif;">
+                            <h5 class="mt-1 mb-1 p-5">Enter Address</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="flex text-center mt-1" style="background-color: rgb(115, 227, 250);font-family: 'Times New Roman', Times, serif;">
+                            <textarea class="mt-1 mb-1 w-75" style="padding: 30px;"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="flex text-center" style="background-color: rgb(115, 227, 250);font-family: 'Times New Roman', Times, serif;">
+                            <h5 class="mt-1 mb-1 p-5">Select Game</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="flex mt-1" style="padding-left: 50px;;background-color: rgb(115, 227, 250);font-family: 'Times New Roman', Times, serif;">
+                            <div class="text-left">
+                                <input class="d-inline" type="checkbox">
+                                <p class="d-inline">Hockey</p>
+                            </div>
+                            <div class="text-left">
+                                <input class="d-inline" type="checkbox">
+                                <p class="d-inline">Football</p>
+                            </div>
+                            <div class="text-left">
+                                <input class="d-inline" type="checkbox">
+                                <p class="d-inline">Badminton</p>
+                            </div>
+                            <div class="text-left">
+                                <input class="d-inline" type="checkbox">
+                                <p class="d-inline">Cricket</p>
+                            </div>
+                            <div class="text-left">
+                                <input class="d-inline" type="checkbox">
+                                <p class="d-inline">Volleyball</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="flex text-center" style="background-color: rgb(115, 227, 250);font-family: 'Times New Roman', Times, serif;">
+                            <h5 class="mt-1 mb-1 p-2">Gender</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="flex text-center mt-1" style="background-color: rgb(115, 227, 250);font-family: 'Times New Roman', Times, serif;">
+                            <div class="row mt-1 mb-1 p-2">
+                                <div class="col-sm-4">
+                                    <label>
+                                        <input type="radio" name="gender">
+                                        Male
+                                    </label>                            
+                                </div>
+                                <div class="col-sm-4">
+                                    <label>
+                                        <input type="radio" name="gender">
+                                        Female
+                                    </label>                            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="flex text-center" style="background-color: rgb(115, 227, 250);font-family: 'Times New Roman', Times, serif;">
+                            <h5 class="mt-1 mb-1 p-3">Select Your Age</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="flex text-center mt-1 p-2" style="background-color: rgb(115, 227, 250);font-family: 'Times New Roman', Times, serif;">
+                            <select class="form-select w-50" name="age" style="margin-left: 30px;">
+                                <option value="" selected disabled>Select your age</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                            </select>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row m-0">
+                    <div class="flex text-center" style="padding-right: 100px;background-color: rgb(115, 227, 250);font-family: 'Times New Roman', Times, serif;">
+                        <input type="file" class="mt-1 mb-1 p-1">
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-12">
+                        <div class="d-flex gap-5 justify-content-around p-2" style="background-color: rgb(115, 227, 250);font-family: 'Times New Roman', Times, serif;">
+                            <button class="w-25 btn btn-light">Click</button>
+                            <button class="w-25 btn btn-light">Reset</button>
+                            <button class="w-25 btn btn-light">Submit form</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
