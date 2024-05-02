@@ -10,6 +10,13 @@ function buildTable(rows, cols, startValue, table) {
     }
 }
 
+function clearTable(table) {
+    while (table.rows.length > 0) {
+        table.deleteRow(0);
+    }
+}
+
+
 const form = document.querySelector('form')
 form.addEventListener("submit", e=>{
     e.preventDefault();
@@ -20,6 +27,11 @@ form.addEventListener("submit", e=>{
     var t1 = document.getElementById("t1")
     var t2 = document.getElementById("t2")
     var t3 = document.getElementById("t3");
+
+    clearTable(t1);
+    clearTable(t2);
+    clearTable(t3);
+
     // splitting inputs
     const x = inp1.split("#").map(Number)
     const y = inp2.split("#").map(Number)
@@ -55,7 +67,6 @@ form.addEventListener("submit", e=>{
                 }
             }
         }
-
     } 
     else 
     {

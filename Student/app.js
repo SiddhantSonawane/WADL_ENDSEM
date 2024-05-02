@@ -113,10 +113,10 @@ app.post("/updatestudent/:id", (req,res)=>{
 
     Student.findByIdAndUpdate(id, {
         $set:{
-            wad_marks: updatedwad,
             cc_marks: updatedcc,
-            cns_marks: updatedcns,
-            dsbda_marks: updateddsbda
+            dsbda_marks: updateddsbda,
+            wad_marks: updatedwad,
+            cns_marks: updatedcns
         }
     },{new: true})
     .then(()=>{
