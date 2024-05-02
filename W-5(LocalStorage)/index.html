@@ -17,43 +17,43 @@
 
     <body>
         <div class="container d-flex flex-column justify-content-center mt-5 w-50 custom-container">
-            <h1 class="text-center m-2 display-6">Registration Form</h1>
+            <h1 class="text-center m-2 display-6 hmm">Registration Form</h1>
             <form id="form" class="form row g-3">
                 <div class="col-md-6">
                     <label for="fname" class="form-label">Name</label>
-                    <input class="form-control" type="text" id="fname" placeholder="Enter Name">
+                    <input class="form-control" type="text" id="fname" placeholder="Enter Name" required>
                 </div>
                 <div class="col-md-6">
                     <label for="femail" class="form-label">Email</label>
-                    <input class="form-control" type="email" id="femail" placeholder="Enter Email">
+                    <input class="form-control" type="email" id="femail" placeholder="Enter Email" required>
                 </div>
                 <div class="col-md-6">
                     <label for="fpass" class="form-label">Password</label>
-                    <input class="form-control" type="password" id="fpass" placeholder="Enter Password">
+                    <input class="form-control" type="password" id="fpass" placeholder="Enter Password" required>
                 </div>
                 <div class="col-md-6">
                     <label for="fcpass" class="form-label">Confirm Password</label>
-                    <input class="form-control" type="password" id="fcpass" placeholder="Confirm Password">
+                    <input class="form-control" type="password" id="fcpass" placeholder="Confirm Password" required>
                 </div>
                 <div class="col-md-12">
                     <label for="fadd" class="form-label">Address</label>
-                    <input class="form-control" type="text" id="fadd" placeholder="Enter Address">
+                    <input class="form-control" type="text" id="fadd" placeholder="Enter Address" required>
                 </div>
                 <div class="col-md-4">
                     <label for="fcity" class="form-label">City</label>
-                    <input class="form-control" type="text" id="fcity" placeholder="Enter City">
+                    <input class="form-control" type="text" id="fcity" placeholder="Enter City" required>
                 </div>
                 <div class="col-md-4">
                     <label for="fdist" class="form-label">District</label>
-                    <input class="form-control" type="text" id="fdist" placeholder="Enter District">
+                    <input class="form-control" type="text" id="fdist" placeholder="Enter District" required>
                 </div>
                 <div class="col-md-4">
                     <label for="fsta" class="form-label">State</label>
-                    <input class="form-control" type="text" id="fsta" placeholder="Enter State">
+                    <input class="form-control" type="text" id="fsta" placeholder="Enter State" required>
                 </div>
                 <div class="col-md-6">
                     <label for="fcnt" class="form-label">Country</label>
-                    <select class="form-select" id="fcnt">
+                    <select class="form-select" id="fcnt" required>
                         <option selected>India</option>
                         <option>Australia</option>
                         <option>America</option>
@@ -63,7 +63,7 @@
                 </div>
                 <div class="col-md-6">
                     <label for="fpin" class="form-label">Pincode</label>
-                    <input class="form-control" id="fpin" placeholder="Pincode" type="text" />
+                    <input class="form-control" id="fpin" placeholder="Pincode" type="text" required>
                 </div>
                 <div class="col-md-12 text-center mt-5">
                     <button  type="submit" class="text-center mb-4 btn btn-dark w-100">Submit</button>

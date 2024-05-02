@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src='../bootstrap/js/bootstrap.min.js'></script>
+</head>
+<body>
+    <div class="container mt-5 d-flex flex-column justify-content-center shadow">
+        <form novalidate class="row needs-validation" id="registrationForm">
+            <div class="col rounded-end-0 rounded-2 g-3 p-4 pb-5 bg-white">
+                <div class="form-row g-2">
+                    <h4 class="px-2 py-1">General Information</h4>
+                    <div class="mt-2 col form-floating">
+                        <input type="text" id="name" class="form-control" placeholder=" " required>
+                        <label for="name" class="form-label">Name</label>
+                        <div class="invalid-feedback">Please enter your name.</div>
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                    <div class="mt-2 col form-floating">
+                        <input type="email" id="email" class="form-control" placeholder=" " required>
+                        <label for="email" class="form-label">Email</label>
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                    <div class="mt-2 col form-floating">
+                        <input type="password" id="password" class="form-control" placeholder=" " required>
+                        <label for="password" class="form-label">Password</label>
+                        <div class="invalid-feedback">Please enter a password.</div>
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                    <div class="mt-2 col form-floating">
+                        <input type="password" id="cpassword" class="form-control" placeholder=" " required>
+                        <label for="cpassword" class="form-label">Confirm Password</label>
+                        <div class="invalid-feedback">Passwords do not match.</div>
+                        <div class="valid-feedback">Passwords match!</div>
+                    </div>
+
+                    <div class="d-flex gap-2 mt-4">
+                        <div class="col form-floating">
+                            <input type="date" id="birthdate" class="form-control" placeholder=" " required>
+                            <label for="birthdate" class="form-label">Birthdate</label>
+                            <div class="invalid-feedback">Please enter your birthdate.</div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="col form-floating">
+                            <input type="tel" id="phone" class="form-control" placeholder=" " required>
+                            <label for="phone" class="form-label">Phone no</label>
+                            <div class="invalid-feedback">Please enter your phone number.</div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                    </div>
+                    <div class="mt-2 col">
+                        <label for="genders" class="form-label">Gender:</label>
+                        <br />
+                        <div class="form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="male" value="Male" checked required>
+                            <label class="form-check-label" for="male">
+                                Male
+                            </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="female" value="Female" required>
+                            <label class="form-check-label" for="female">
+                                Female
+                            </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="othergender" value="Other" required>
+                            <label class="form-check-label" for="othergender">
+                                Other
+                            </label>
+                        </div>
+                        <div class="invalid-feedback">Please select your gender.</div>
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col rounded-start-0 rounded-2 g-3 p-4 pb-5 bg-white">
+
+                <div class="form-row g-2">
+
+                    <h4 class="px-2 py-1">Other Information</h4>
+
+
+                    <div class="mt-2 col form-floating">
+                        <input type="text" id="street" class="form-control" placeholder=" " required>
+                        <label for="street" class="form-label">Street</label>
+                        <div class="invalid-feedback">Please enter your street address.</div>
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                    <div class="mt-2 col form-floating">
+                        <input type="text" id="suite" class="form-control" placeholder=" " required>
+                        <label for="suite" class="form-label">Suite</label>
+                        <div class="invalid-feedback">Please enter your suite number.</div>
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                    <div class="mt-2 col form-floating">
+                        <select class="form-select" id="city">
+                            <option value="">Choose</option>
+                            <option value="Nashik">Nashik</option>
+                            <option value="Nashik">Thane</option>
+                            <option value="Nashik">Mumbai</option>
+                            <option value="Nashik">Pune</option>
+                        </select>
+                        <label for="city" class="form-label">City</label>
+                        <div class="invalid-feedback">Please enter your city.</div>
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                    <div class="d-flex gap-2 mt-2">
+                        <div class="mt-2 col form-floating">
+                            <input type="text" id="zipcode" class="form-control" placeholder=" " required>
+                            <label for="zipcode" class="form-label">Zipcode</label>
+                            <div class="invalid-feedback">Please enter your zipcode.</div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="mt-2 col form-floating">
+                            <input type="text" id="lat" class="form-control" placeholder=" " required>
+                            <label for="lat" class="form-label">Latitude</label>
+                            <div class="invalid-feedback">Please enter latitude.</div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="mt-2 col form-floating">
+                            <input type="text" id="lng" class="form-control" placeholder=" " required>
+                            <label for="lng" class="form-label">Longitude</label>
+                            <div class="invalid-feedback">Please enter longitude.</div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                    </div>
+                    <div class="mt-2 col form-floating">
+                        <input type="text" id="website" class="form-control" placeholder=" " required>
+                        <label for="website" class="form-label">Website</label>
+                        <div class="invalid-feedback">Please enter your website.</div>
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                    <div class="mt-2 col form-floating">
+                        <input type="text" id="company" class="form-control" placeholder=" " required>
+                        <label for="company" class="form-label">Company</label>
+                        <div class="invalid-feedback">Please enter your company name.</div>
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+
+                </div>
+
+            </div>
+            <button type="submit" class="btn btn-dark my-3">Submit</button>
+        </form>
+    </div>
+    <div class="container">
+        <a href="users.html">Check users list</a>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

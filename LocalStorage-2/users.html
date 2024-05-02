@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src='../bootstrap/js/bootstrap.min.js'></script>
+</head>
+<body  style="background-color: rgb(186, 255, 255);">
+    <div class="container mt-2">
+        <div class="row" id="userList">
+        </div>
+    </div>
+
+    <script>
+        // Retrieve user data from localStorage
+        const userData = JSON.parse(localStorage.getItem('data')) || [];
+
+        // Reference to the user list container
+        const userList = document.getElementById('userList');
+
+        // Function to create user card
+        function createUserCard(user) {
+            const card = document.createElement('div');
+            card.className = 'col-lg-4 my-4';
+
+            const cardContent = `
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">${user.name}</h5>
+                        <h6 class="card-subtitle text-muted">${user.email}</h6>
+                        <p class="ps-2">Birthdate: ${user.birthdate}</p>
+                        <p class="ps-2">Gender: ${user.gender}</p>
+                        <a href="${user.website}" class="ps-2 card-link">Visit website</a>
+                    </div>
+                </div>
+            `;
+
+            card.innerHTML = cardContent;
+            userList.appendChild(card);
+        }
+
+        // Populate user data onto the page
+        userData.forEach(user => {
+            createUserCard(user);
+        });
+    </script>
+</body>
+</html>
